@@ -15,6 +15,9 @@ class Food extends Model
     }
 
     public function image() {
-        return $this->morphOne(Image::class, 'imageable');
+        return $this->morphOne(Image::class, 'imageable')->withDefault([
+             'path' => asset('images/noo_imagee.jpg'),
+             'type' => 'main',
+        ]);
     }
 }
