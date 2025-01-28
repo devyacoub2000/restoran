@@ -25,6 +25,32 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.show_booking')}}">
+                <i class="fas fa-box"></i>
+                <span>All Reservations</span>
+            </a>
+        </li>
+
+         <hr class="sidebar-divider my-0">
+
+
+          <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.contact')}}">
+                <i class="fas fa-box"></i>
+                <span>All Contacts</span>
+            </a>
+        </li>
+
+
+        <!-- Divider -->
+
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
         <!-- Nav Item - Service -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseservice"

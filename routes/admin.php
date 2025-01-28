@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\MealController;
 use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\ChefController;
+use App\Http\Controllers\User\ContactController;
 
 Route::prefix('admin')->name('admin.')->middleware('auth', 'is_admin')->group(function() {
 
@@ -18,5 +19,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth', 'is_admin')->group(fu
    Route::resource('meal', MealController::class); 
    Route::resource('food', FoodController::class); 
    Route::resource('chef', ChefController::class); 
+   Route::get('reservation', [AdminController::class, 'show_booking'])->name('show_booking');
+   Route::put('updat_status/{id}', [AdminController::class, 'updat_status'])->name('updat_status');
+
+   Route::get('contact', [ContactController::class, 'contact'])->name('contact');
 
 });

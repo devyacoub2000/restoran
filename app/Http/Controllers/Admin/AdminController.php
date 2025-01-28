@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Book;
 
 class AdminController extends Controller
 {
@@ -14,6 +15,23 @@ class AdminController extends Controller
     public function index() {
         return view('admin.index');
     }
+
+    public function show_booking() {
+       $data = Book::latest('id')->paginate();
+       return view('admin.show_booking', compact('data'));
+    }
+
+    public function updat_status(Request $request, $id) {
+          
+          $appointment = Book::findOrFail($id);
+
+          $appointment->update([
+            'status' => $request->status,
+         ]);
+
+         return redirect()->back()->with('msg', 'Status Changed Done..');
+
+    } 
 
     public function profile() {
       $admin = Auth::user();
