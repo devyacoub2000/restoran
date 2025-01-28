@@ -33,6 +33,7 @@ class ServiceController extends Controller
         $request->validate([
            'name' => 'required',
            'body' => 'required',
+           'class_icon' => 'required',
         ]);
 
         Service::create($request->all());

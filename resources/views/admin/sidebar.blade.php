@@ -27,22 +27,21 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.show_booking')}}">
-                <i class="fas fa-box"></i>
-                <span>All Reservations</span>
-            </a>
+        <a class="nav-link" href="{{route('admin.show_booking')}}">
+            <i class="fas fa-calendar-check"></i> 
+            <span>All Reservations</span>
+        </a>
         </li>
 
-         <hr class="sidebar-divider my-0">
+        <hr class="sidebar-divider my-0">
 
-
-          <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.contact')}}">
-                <i class="fas fa-box"></i>
-                <span>All Contacts</span>
-            </a>
+        <a class="nav-link" href="{{route('admin.contact')}}">
+            <i class="fas fa-address-book"></i> 
+            <span>All Contacts</span>
+        </a>
         </li>
+
 
 
         <!-- Divider -->

@@ -17,6 +17,7 @@
          <tr class="bg-dark text-white">
              <th>#</th>
              <th>Name</th>
+             <th>Icon Name</th>
              <th>Describtion</th>
              <th>Action</th>
          </tr>
@@ -25,6 +26,7 @@
          <tr>
              <td>{{$loop->iteration}}</td>
              <td>{{$item->name}}</td>
+             <td>{{$item->class_icon}}</td>
              <td>{{$item->body}}</td>
              <td>
                   <a href="{{route('admin.service.edit', $item->id)}}" class="btn btn-info"> <i class="fas fa-edit"></i>

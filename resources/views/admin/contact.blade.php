@@ -12,7 +12,7 @@
         </button>
        </div>
      @endif 
-    <h1 class="h3 mb-4 text-gray-800">Services</h1>
+    <h1 class="h3 mb-4 text-gray-800">Contacts</h1>
     <table class="table table-bordered table-hover">
          <tr class="bg-dark text-white">
              <th>#</th>

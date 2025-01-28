@@ -17,6 +17,8 @@
          <tr class="bg-dark text-white">
              <th>#</th>
              <th>Name</th>
+             <th>Small Name</th>
+             <th>Class Icon</th>
              <th>Action</th>
          </tr>
 
@@ -24,6 +26,8 @@
          <tr>
              <td>{{$loop->iteration}}</td>
              <td>{{$item->name}}</td>
+             <td>{{$item->small_word}}</td>
+             <td>{{$item->class_icon}}</td>
              <td>
                   <a href="{{route('admin.meal.edit', $item->id)}}" class="btn btn-info"> <i class="fas fa-edit"></i>
                  </a>

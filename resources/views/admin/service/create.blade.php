@@ -17,6 +17,14 @@
            @enderror
           </div>
 
+           <div class="mb-3">       
+           <label for="class_icon">  Service Icon Name  </label>
+           <input type="text" name="class_icon" placeholder="Name Icon Service" value="{{old('class_icon')}}" class="form-control @error('class_icon') is-invalid @enderror">
+           @error('class_icon')
+             <small class="invalid-feedback"> {{$message}} </small>
+           @enderror
+          </div>
+
           <div class="mb-3">       
            <label for="body">  Service Description  </label>
            <textarea type="text" name="body" placeholder="Description Service" class="form-control @error('body') is-invalid @enderror" rows="4">
